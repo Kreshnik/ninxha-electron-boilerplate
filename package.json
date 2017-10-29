@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "author": "MindModus",
+  "name": "ninxha-electron-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for electron apps.",
+  "main": "app.js",
+  "scripts": {
+    "startDev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development electron .",
+    "start": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production electron .",
+    "test": "ava",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=dist/ico/win/app.ico --prune=true --out=releases --version-string.CompanyName=Ninxha --version-string.FileDescription=Ninxha --version-string.ProductName=\"Ninxha\""
+  },
+  "devDependencies": {
+    "ava": "0.23.0",
+    "electron": "1.7.9",
+    "electron-packager": "9.1.0",
+    "laravel-mix": "1.5.1",
+    "vue-devtools": "^3.1.9"
+  },
+  "dependencies": {
+    "cross-env": "5.1.1",
+    "devtron": "1.4.0",
+    "electron-settings": "3.1.3",
+    "element-ui": "2.0.1",
+    "family.scss": "^1.0.8",
+    "fs-extra": "^4.0.2",
+    "lodash": "^4.17.4",
+    "promise": "^8.0.1",
+    "uuid": "^3.1.0",
+    "vue": "2.5.2",
+    "vue-router": "3.0.1"
+  }
+}
