@@ -1,2 +1,6 @@
 /node_modules
 /.idea
+/releases
+/dist
+*.SD_Store
+*SD_Store
