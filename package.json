@@ -32,7 +32,7 @@
     "element-ui": "2.11.1",
     "family.scss": "^1.0.8",
     "fs-extra": "8.1.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "promise": "8.0.3",
     "uuid": "3.3.2",
     "vue": "2.6.10",
